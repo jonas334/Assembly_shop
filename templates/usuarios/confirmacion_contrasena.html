@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}Recuperar Contraseña{% endblock title %}
+
+{% block contenido %}
+    <div class="contenido-centrado container-xxl">
+        <div class="formulario-centrado d-flex flex-column justify-content-center align-items-center"> 
+            {% if error %}
+                <p>Se han enviado las instrucciones de recuperacion de contraseña al correo ingresado</p> 
+            {% else %}
+                <h1>Error en la recuperacion de la contraseña</h1>
+                <p>El correo ingresado no esta registrado en la base de datos</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock contenido %}
